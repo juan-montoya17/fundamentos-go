@@ -22,7 +22,4 @@ Si deseas contribuir al repositorio, por favor sigue los siguientes pasos:
 
 Las contribuciones son bienvenidas. Si encuentras algún error o tienes alguna sugerencia para mejorar los ejercicios o proyectos existentes, por favor haz un pull request o crea un issue.
 
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
 
