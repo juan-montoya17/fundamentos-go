@@ -6,11 +6,6 @@ Este repositorio contiene una serie de ejercicios y proyectos para aprender los 
 
 Es necesario tener conocimientos básicos de programación y familiaridad con la sintaxis de algún otro lenguaje de programación. También es recomendable haber trabajado con Git anteriormente.
 
-## Estructura del repositorio
-
-- `ejercicio1`: En este ejercicio se trabajará con variables, operadores y estructuras de control de flujo.
-- `ejercicio2`: En este ejercicio se trabajará con funciones, estructuras y punteros.
-- `proyecto1`: En este proyecto se desarrollará una aplicación web sencilla utilizando el framework Gin.
 
 ## Cómo contribuir
 
