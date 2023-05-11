@@ -1,33 +1,52 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+type calc struct{}
+
+func (calc) operate(input string, operator string) int {
+	cleanInput := strings.Split(input, operator)
+	operator1 := parse(cleanInput[0])
+	operator2 := parse(cleanInput[1])
+	switch operator {
+	case "+":
+		fmt.Println(operator1 + operator2)
+		return operator1 + operator2
+	case "-":
+		fmt.Println(operator1 - operator2)
+		return operator1 - operator2
+	case "*":
+		fmt.Println(operator1 * operator2)
+		return operator1 * operator2
+	case "/":
+		fmt.Println(operator1 / operator2)
+		return operator1 / operator2
+	default:
+		fmt.Println("Invalid operator")
+		return 0
+	}
+}
+
+func parse(values string) int {
+	operator, _ := strconv.Atoi(values)
+	return operator
+}
+
+func readInput() string {
+	scanner := bufio.NewScanner(os.Stdin)
+	scanner.Scan()
+	return scanner.Text()
+}
 
 func main() {
-	// Declaracion de constantes
-	const pi float64 = 3.14
-	const pi2 = 3.1415
-
-	fmt.Println("pi:", pi)
-	fmt.Println("pi2:", pi2)
-
-	// Declaracion de variables enteras
-	base := 12
-	var altura int = 14
-	var area int
-
-	fmt.Println(base, altura, area)
-
-	// Zero values
-	var a int
-	var b float64
-	var c string
-	var d bool
-
-	fmt.Println(a, b, c, d)
-
-	// Area de un cuadrado
-	const baseCuadrado = 10
-	areaCuadrado := baseCuadrado * baseCuadrado
-
-	fmt.Println("Area cuadrado:", areaCuadrado)
+	input := readInput()
+	operator := readInput()
+	c := calc{}
+	fmt.Println(c.operate(input, operator))
 }
